@@ -111,17 +111,3 @@ TFcluster[,2]=rowMeans(temp_normalTF)
 ## index
 fit=Readout[[6]]
 Sample_index=predict(fit,newx=TFcluster,s=c(0.1,0.05))
-
-write.csv(Sample_index,'GSE89632_index.csv')
-all_varlist=ls()
-rm_var=(all_varlist[!(all_varlist=='Readout')])
-rm(list=rm_var)
-
-A=read.csv('/other/R_0618/GSE66676_index_no.csv')
-tt=as.numeric(A$X1)
-tt1=tt[1:34]
-tt2=tt[35:60]
-
-mean(tt1)
-mean(tt2)
-t.test(tt2,tt1)
