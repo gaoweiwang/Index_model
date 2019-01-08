@@ -1,12 +1,10 @@
 
 #Input: training data, testing data
-x=read.csv('/mnt/dell1/gaowei/model/data/rep_new_norm_20.csv')
+x=read.csv('data.csv')
 x=x[,c(1,14:16,26:28,32:34,38:40,44:46,59:61,65:67,71:73,89:91,56:58,86:88,96:100)]
 y=c(rep(1,27),rep(2,11))
-#z=read.csv('/mnt/dell1/gaowei/model/data/rep_new_norm_20.csv')
-z=read.csv('/mnt/dell1/gaowei/model/data/Human_data1/GSE89632_NASH.csv')
-#z=read.csv('/mnt/dell1/gaowei/model/data/Human_data/GSE14520_GPL3921_ID.csv')
-#z=read.csv('/mnt/dell1/gaowei/model/data/Human_data/GSE16757.csv')
+z=read.csv('data.csv')
+
 
 ###data normalization
 x$X=toupper(as.character(x$X))
