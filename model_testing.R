@@ -5,7 +5,6 @@ x=x[,c(1,14:16,26:28,32:34,38:40,44:46,59:61,65:67,71:73,89:91,56:58,86:88,96:10
 y=c(rep(1,27),rep(2,11))
 z=read.csv('data.csv')
 
-
 ###data normalization
 x$X=toupper(as.character(x$X))
 z=z[!is.na(z$X),]
